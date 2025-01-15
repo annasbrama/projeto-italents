@@ -48,13 +48,34 @@ nav .nav__links a {
     transition: color 0.3s ease-in;
 }
 
-nav .nav__links a:hover {
+nav .nav__links a:hover, nav button:hover {
     color: #1E1E1E;
+}
+
+nav button {
+    background-color: #ffffff50;
+    color: #fff;
+    width: 190px;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    height: 45px;   
+    border: none;
+    transition: color 0.3s ease-in;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 nav .nav__logo img {
     width: 180px;
     margin-right: 3rem;
+}
+
+nav .nav__links span {
+    margin-left: 3rem;
+    color: #1E1E1E;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* MAIN */
