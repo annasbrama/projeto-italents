@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <nav>
+    <nav aria-label="Menu principal">
         <div class="nav__links">
             <ul>
                 <li><a href="#">Photos</a></li>
                 <li><a href="#">Players</a></li>
                 <li><a href="#">About</a></li>
-                <button>Welcome</button>
-                <span class="userName"></span>
             </ul>
+            <div class="nav__btn">
+                <button aria-label="Botão de boas vindas">Welcome</button>
+                <span class="userName"></span>
+            </div>
         </div>
         <div class="nav__logo">
             <img src="assets/logo-cannon.svg" alt="Cannon logo">
@@ -31,9 +33,9 @@
             <h3>North London Forever</h3>
         </div>
         <div class="main__banner">
-            <img src="assets/saka-main.JPG" alt="Bukayo Saka's Portrait">
-            <img src="assets/odegaard-main.JPG" alt="Martin Odegaard's Portrait">
-            <img src="assets/saliba-main.JPG" alt="William Saliba's Portrait">
+            <img src="assets/saka-main.JPG" alt="Bukayo Saka's Portrait" loading="lazy">
+            <img src="assets/odegaard-main.JPG" alt="Martin Odegaard's Portrait" loading="lazy">
+            <img src="assets/saliba-main.JPG" alt="William Saliba's Portrait" loading="lazy">
         </div>
         <div class="main__border"></div>
     </main>
@@ -45,7 +47,7 @@
         <div class="news__menu">
             <div class="news__photo">
                 <img src="assets/merino-celebrating-brentford.jpg"
-                    alt="Mikel Merino celebrating against Brentford - Premier League">
+                    alt="Mikel Merino celebrating against Brentford - Premier League" loading="lazy">
             </div>
             <div class="news__albums">
                 <div class="album__name">

@@ -18,20 +18,24 @@ images.forEach(image => {
 })
 
 //colocando mensagem de boas vindas no nav através do button 
-const btn = document.querySelector("button").onclick = () => welcome()
+const btn = document.querySelector("button");btn.addEventListener("click", welcome)
 const userName = document.querySelector(".userName")
 
 userName.textContent = ""
 
 function welcome() {
     let name = prompt("What's your name?")
-    if(name){
+    if (!name.trim()) { 
+        alert("Please enter a valid name.")
+        return
+    }
+    if (name) {
         localStorage.setItem("name", name)
-        userName.textContent = `Welcome ${name}`
+        userName.textContent = `Hello, ${name}.`
     }
 }
 
 const storedName = localStorage.getItem("name")
-if (storedName){
+if (storedName) {
     userName.textContent = `Hello, ${storedName}.`
 }

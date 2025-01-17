@@ -27,7 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-bottom: 3px solid #1E1E1E;
 }
 
@@ -48,22 +48,34 @@ nav .nav__links a {
     transition: color 0.3s ease-in;
 }
 
-nav .nav__links a:hover, nav button:hover {
+nav .nav__links a:hover {
     color: #1E1E1E;
 }
 
+nav .nav__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
 nav button {
-    background-color: #ffffff50;
-    color: #fff;
-    width: 190px;
+    background-color: #fff;
+    color: #f00;
+    width: 180px;
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
-    height: 45px;   
+    height: 35px;   
     border: none;
-    transition: color 0.3s ease-in;
+    transition: all 0.3s ease-in;
     border-radius: 8px;
     cursor: pointer;
+}
+
+nav button:hover {
+    color: #fff;
+    background-color: #f00 ;
 }
 
 nav .nav__logo img {
@@ -88,6 +100,7 @@ main .main__title {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     text-transform: uppercase;
     text-shadow: var(--default-drop-shadow);
     color: #f00;
