@@ -23,15 +23,18 @@ const userName = document.querySelector(".userName")
 
 userName.textContent = ""
 
-function welcome() {
-    let name = prompt("What's your name?")
-    if(name){
-        localStorage.setItem("name", name)
-        userName.textContent = `Welcome ${name}`
-    }
-}
+//obtendo o nome do usuário
+const getUserName = () => prompt("What's your name?")
+//salvando o nome do usuário no localStorage do navegador
+const saveName = (name) => localStorage.setItem('name', name)
+const createWelcomeMessage = (name) => `Welcome ${name}`
+//atualizando o nome do usuário já inserido anteriormente
+const updateUserName = (message) => (userName.textContent = message)
 
-const storedName = localStorage.getItem("name")
-if (storedName){
-    userName.textContent = `Hello, ${storedName}.`
+const welcome = () => {
+    const name = getUserName()
+    if (name) {
+        saveName(name)
+        updateUserName(createWelcomeMessage(name))
+    }
 }
