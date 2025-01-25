@@ -20,9 +20,33 @@ a {
     text-decoration: none;
 }
 
-/* NAV */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.9rem;
+}
 
+.container,
+main,
+.news__section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.9rem;
+}
+
+main .container,
+.news__section .container {
+    display: block;
+    padding: 0;
+}
+
+/* NAV */
 nav {
+    width: 100%;
     background-color: #f00;
     display: flex;
     justify-content: space-between;
@@ -31,9 +55,13 @@ nav {
     border-bottom: 3px solid #1E1E1E;
 }
 
+nav .nav__links {
+    display: flex;
+    align-items: center;
+}
+
 nav .nav__links ul {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     list-style: none;
     gap: 4rem;
@@ -66,16 +94,17 @@ nav button {
     font-size: 3rem;
     font-weight: 900;
     text-transform: uppercase;
-    height: 35px;   
+    height: 35px;
     border: none;
     transition: all 0.3s ease-in;
     border-radius: 8px;
     cursor: pointer;
+    margin-left: 4rem;
 }
 
 nav button:hover {
     color: #fff;
-    background-color: #f00 ;
+    background-color: #f00;
 }
 
 nav .nav__logo img {
@@ -120,7 +149,7 @@ main .main__banner {
     justify-content: center;
     flex: 1 1 200px;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 3rem;
     margin-top: 4rem;
 }
 
@@ -134,15 +163,20 @@ main .main__border {
     border: 1px solid #1E1E1E20;
 }
 
-/* SECTION NEWS */
+/* SECTIONS */
 .news__section {
     display: block;
-    margin: 5rem;
-    flex: 1 1 200px;
-    flex-wrap: wrap;    
+    margin: 5rem auto;
 }
 
-.news__title {
+.news__section .news__menu {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.news__title,
+.title__about {
     font-size: 3rem;
     text-shadow: var(--default-drop-shadow);
     margin-bottom: 2rem;
@@ -173,6 +207,7 @@ main .main__border {
     border-radius: 8px 8px 8px 0px;
     margin: 1rem;
 }
+
 .news__albums .album__name a {
     color: #1E1E1E;
     font-weight: 600;
@@ -186,4 +221,94 @@ main .main__border {
     font-size: 2rem;
     margin-top: 0.5rem;
     font-weight: 800;
+}
+
+/* SECTION - ABOUT ME  */
+.about__section .container {
+    display: block;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.title__about {
+    margin-bottom: 4rem;
+}
+.text__about p {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.about__section .container {
+    display: block;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.text__about p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.image__about img {
+    max-width: 1150px;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: #f00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-top: 3px solid #1E1E1E;
+}
+
+footer .footer__logo img {
+    width: 100px;
+}
+
+footer .footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer__links ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    margin-left: 5rem;
+}
+
+footer .footer__links ul img {
+    width: 40px;
+}
+
+.footer__links .footer__text {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    main .main__banner {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .news__menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news__menu .news__photo img,
+    .news__menu .news__albums, .image__about img {
+        width: 100%;
+        max-width: 655px;
+    }
 }

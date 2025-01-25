@@ -2,12 +2,12 @@
 const images = document.querySelectorAll(".main__banner img")
 
 const imagesClick = {
-    "assets/saka-main.JPG": "assets/saka-click.JPG",
-    "assets/odegaard-main.JPG": "assets/odegaard-click.JPG",
-    "assets/saliba-main.JPG": "assets/saliba-click.JPG",
-    "assets/saka-click.JPG": "assets/saka-main.JPG",
-    "assets/odegaard-click.JPG": "assets/odegaard-main.JPG",
-    "assets/saliba-click.JPG": "assets/saliba-main.JPG",
+    "assets/main-banner/saka-main.JPG": "assets/main-banner/saka-click.JPG",
+    "assets/main-banner/odegaard-main.JPG": "assets/main-banner/odegaard-click.JPG",
+    "assets/main-banner/saliba-main.JPG": "assets/main-banner/saliba-click.JPG",
+    "assets/main-banner/saka-click.JPG": "assets/main-banner/saka-main.JPG",
+    "assets/main-banner/odegaard-click.JPG": "assets/main-banner/odegaard-main.JPG",
+    "assets/main-banner/saliba-click.JPG": "assets/main-banner/saliba-main.JPG",
 }
 
 images.forEach(image => {
