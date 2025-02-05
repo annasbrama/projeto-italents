@@ -1,21 +1,19 @@
-//mudando imagens do main por click
-const images = document.querySelectorAll(".main__banner img")
+//slides do main__banner
+let count = 1
+document.getElementById("radio1").checked = true
 
-const imagesClick = {
-    "assets/main-banner/saka-main.JPG": "assets/main-banner/saka-click.JPG",
-    "assets/main-banner/odegaard-main.JPG": "assets/main-banner/odegaard-click.JPG",
-    "assets/main-banner/saliba-main.JPG": "assets/main-banner/saliba-click.JPG",
-    "assets/main-banner/saka-click.JPG": "assets/main-banner/saka-main.JPG",
-    "assets/main-banner/odegaard-click.JPG": "assets/main-banner/odegaard-main.JPG",
-    "assets/main-banner/saliba-click.JPG": "assets/main-banner/saliba-main.JPG",
-}
+setInterval(() => {
+    nextImage()
+}, 2000)
 
-images.forEach(image => {
-    image.onclick = () => {
-        let currentSrc = image.getAttribute("src")
-        image.setAttribute("src", imagesClick[currentSrc])
+const nextImage = () => {
+    count++
+    if (count > 3) {
+        count = 1
     }
-})
+    document.getElementById("radio" + count).checked = true
+
+}
 
 //colocando mensagem de boas vindas no nav através do button 
 const btn = document.querySelector("button").onclick = () => welcome()
@@ -39,6 +37,7 @@ const welcome = () => {
     }
 }
 
+// criando a função para o carregamento da section news__section
 const newsSection = () => {
     let section = document.querySelector('.news__section')
     let container = section.querySelector('.container')
