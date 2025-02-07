@@ -25,7 +25,7 @@ userName.textContent = ""
 const getUserName = () => prompt("What's your name?")
 //salvando o nome do usuário no localStorage do navegador
 const saveName = (name) => localStorage.setItem('name', name)
-const createWelcomeMessage = (name) => `Welcome ${name}`
+const createWelcomeMessage = (name) => `Welcome, ${name}`
 //atualizando o nome do usuário já inserido anteriormente
 const updateUserName = (message) => (userName.textContent = message)
 
