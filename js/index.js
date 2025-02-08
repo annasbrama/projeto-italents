@@ -1,3 +1,20 @@
+//evento criado para o menu hamburguer poder ativar o elemento .nav__links
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger')
+    const navLinks = document.querySelector('.nav__links')
+
+    if (navLinks) {
+        navLinks.classList.remove('active')
+    }
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', (e) => {
+            e.preventDefault()
+            navLinks.classList.toggle('active')
+        })
+    }
+})
+
 //slides do main__banner
 let count = 1
 document.getElementById("radio1").checked = true
@@ -12,7 +29,6 @@ const nextImage = () => {
         count = 1
     }
     document.getElementById("radio" + count).checked = true
-
 }
 
 //colocando mensagem de boas vindas no nav através do button 
